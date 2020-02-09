@@ -1,6 +1,6 @@
 function factorial(n) {
   if (n < 0) {
-    return new Error(`The parameter ${n} must be a natural number.`);
+    throw new RangeError(`A natural number was expected but ${n} was given.`);
   }
 
   if (n === 0) {
