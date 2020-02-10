@@ -1,13 +1,15 @@
 function vowelsAndConsonants(s) {
+  const vowels = [];
   const consonants = [];
 
   [...s].forEach((c) => {
     if ('aeiou'.includes(c)) {
-      console.log(c);
+      vowels.push(c);
     } else {
       consonants.push(c);
     }
   });
 
-  consonants.forEach((c) => console.log(c));
+  console.log(vowels.join('\n'));
+  console.log(consonants.join('\n'));
 }
