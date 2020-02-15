@@ -1,4 +1,4 @@
-# Explanation of my solution to "Day 6: Bitwise Operators"
+# Explanation of "Day 6: Bitwise Operators"
 All we have to do is the following two.
 1. Prove that `a & b` is at least `k - 2`.
   * If `k - 2` is even, the least significant bit (LSB) of `a (= k - 2)` is 0.
