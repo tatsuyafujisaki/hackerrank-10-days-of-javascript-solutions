@@ -9,7 +9,7 @@
  * 2. Determine when `a & b` is `k - 1`.
  * - For `a & b == k - 1` to hold, `a` must be `k - 1`.
  * - For `((k - 1) & b) === k - 1` to hold, `b` must be `k - 1` except one bit, which corresponds to `a`'s any bit of 0, to 1.
- *   Moreoever, to minimize the chance of `b` exceeding `n`, `b`'s corresponding bit must be `a`'s LSB of 0. Such `b` is `(k - 1) | k`.
+ *   Moreoever, to minimize the chance of `b` exceeding `n`, `b`'s bit must correspond to `a`'s LSB of 0. Such `b` is `(k - 1) | k`.
  *
  * In conclusion, `a & b` is `k - 1` as long as `b (= (k - 1) | k)` does not exceed `n`. If it does, `a & b` is `k - 2`.
 */
