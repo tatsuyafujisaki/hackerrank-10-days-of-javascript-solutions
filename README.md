@@ -6,6 +6,6 @@ All we have to do is the following two.
   * Either way, LSB of `b (= a + 1)` is 1. So, `a & b === a >= k - 2`.
 2. Determine when `a & b` is `k - 1`.
   * Given the restriction `a < b`, for `a & b == k - 1` to hold, `a` must be `k - 1`.
-  * For `((k - 1) & b) === k - 1` to hold, `b` must be `(k - 1) | k` that equals `k - 1` except one bit, which corresponds to `a`'s LSB of 0 instead of `a`'s any bit of 0, is 1. to minimize the chance of `b` exceeding `n`.
+  * For `((k - 1) & b) === k - 1` to hold, `b` must be `(k - 1) | k` that equals `k - 1` except one bit, which corresponds to `a`'s LSB of 0.
 
 In conclusion, `a & b` is `k - 1` as long as `b (= (k - 1) | k)` does not exceed `n`. If it does, `a & b` is `k - 2`.
