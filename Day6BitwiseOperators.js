@@ -1,19 +1,4 @@
-/**
- * All we have to do is the following two.
- *
- * 1. Prove that `a & b` is at least `k - 2`.
- * - If `k - 2` is even, the least significant bit (LSB) of `k - 2` is 0. Assign `k - 2` to `a`.
- * - If `k - 1` is even, LSB of `k - 1` is 0. Assign `k - 1` to `a`.
- * - Either way, LSB of `a + 1` is 1. Assign `a + 1` to `b`. So, `a & b == a`.
- *
- * 2. Determine when `a & b` is `k - 1`.
- * - For `a & b == k - 1` to hold, `a` must be `k - 1`.
- * - For `((k - 1) & b) === k - 1` to hold, `b` must be `k - 1` except one bit, which corresponds to `a`'s any bit of 0, is 1.
- *   Moreoever, to minimize the chance of `b` exceeding `n`, `b`'s bit must correspond to `a`'s LSB of 0. Such `b` is `(k - 1) | k`.
- *
- * In conclusion, `a & b` is `k - 1` as long as `b (= (k - 1) | k)` does not exceed `n`. If it does, `a & b` is `k - 2`.
-*/
-
+// https://github.com/tatsuyafujisaki/hackerrank-10-days-of-javascript-solutions/blob/master/README.md
 function getMaxLessThanK(n, k) {
   return n < ((k - 1) | k) ? (k - 2) : (k - 1);
 }
