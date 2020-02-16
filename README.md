@@ -1,4 +1,4 @@
-# Explanation of my solution to `Day 6: Bitwise Operators`
+# Explanation of `Day 6: Bitwise Operators`
 
 * `a & b` is at least `k - 2` because:
   * If `k - 2` is even, the least significant bit (LSB) of `k - 2` is `0`. Assign `a = k - 2`.
