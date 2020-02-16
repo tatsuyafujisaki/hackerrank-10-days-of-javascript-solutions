@@ -10,7 +10,7 @@
   * To be precise, the exception bit of `b` must be positioned at `a`'s LSB of `0` to minimize the chance of `b` exceeding `n`. Such `b` is `(k - 1) | k`.
 * In conclusion, `a & b` is `k - 1` as long as `b (= (k - 1) | k)` does not exceed `n`. If it does, `a & b` is `k - 2`.
 
-The naive implementation of the above logic is:
+The literal implementation of the above logic is:
 ```js
 function getMaxLessThanK(n, k) {
   let a = k - 1
