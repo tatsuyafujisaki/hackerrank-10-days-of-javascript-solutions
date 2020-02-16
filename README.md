@@ -9,3 +9,25 @@
   * For `((k - 1) & b) === k - 1` to hold, `b` is the same as `k - 1` except one bit, which is positioned at `a`'s any bit of 0, is 1.
   * To be precise, the exception bit of `b` must be positioned at `a`'s LSB of `0` to minimize the chance of `b` exceeding `n`. Such `b` is `(k - 1) | k`.
 * In conclusion, `a & b` is `k - 1` as long as `b (= (k - 1) | k)` does not exceed `n`. If it does, `a & b` is `k - 2`.
+
+The naive implementation of the above logic is:
+```js
+function getMaxLessThanK(n, k) {
+  let a = k - 1
+  let b = (k - 1) | k
+
+  if (n < b) {
+    a = k - 2
+    b = a + 1
+  }
+
+  return a & b
+}
+```
+
+The shorter implementation is:
+```js
+function getMaxLessThanK(n, k) {
+  return ((k - 1) | k) <= n ? (k - 1) : (k - 2);
+}
+```
